@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class= 'container'> 
+  
+  
+        <header> Hello! </header>
+      
+        
+       <section>
+        <form id = 'myForm' action="https://httpbin.org/get" method="get">
+          <label for="name-field">Name:</label>
+          <input id="name-field" class="name-field" name="user_name" placeholder="Enter your name">
+      
+          <label for="date-field">Date:</label>
+          <input id="date-field" class="name-field" type="date" name="user_date">
+      
+          <label for="email-field">Email:</label>
+          <input id="email-field" class="name-field" name="user_email" placeholder="Enter your email">
+      
+          <label for="message-field">Message:</label>
+          <input id="message-field" class="name-field" name="user_message" placeholder="Maybe some message...">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        <p>Оберіть ваш улюблений напій:</p>
+         <div>
+        <input type="radio" id="favorite" name="favoriteDrink" value="tea">
+        <label for="colorRed">Чай</label><br>
+        
+        <input type="radio" id="favorite" name="favoriteDrink" value="coffe">
+        
+           <label for="colorGreen">Кава</label><br>
+        
+        <input type="radio" id="favorite" name="favoriteDrink" value="water">
+        <label for="colorBlue">Вода</label>
+         
+        <input type="radio" id="favorite" name="favoriteDrink" value="milk">
+        <label for="colorBlue">Молоко</label>
+           
+           
+           
+           </div>
+          
+          
+          
+          
+          
+        <p>Оберіть вашу національність:</p>
+         <div>
+        <input type="radio" id="favorite" name="country" value="ukraine">
+        <label for="colorRed">українець</label><br>
+        
+        <input type="radio" id="favorite" name="country" value="poland">
+        
+           <label for="colorGreen">польща</label><br>
+        
+        <input type="radio" id="favorite" name="country" value="chech">
+        <label for="colorBlue">чехія</label>
+         
+        <input type="radio" id="favorite" name="country" value="slovakian">
+        <label for="colorBlue">словакія</label>
+       
+      
+          <div>
+            <button type="submit">Send</button>
+            <button type="reset">Clear</button>
+          </div>
+          </section>
+        </form>
+      
+      
+        
+      </div>
+         <picture>
+        <source media="(min-width: 726px)" srcset="https://picsum.photos/600/800">
+        <source media="(max-width: 726px)" srcset="https://picsum.photos/200/400">
+        <img src="small-image.jpg" alt="Адаптивне зображення">
+      </picture>
+
+      <script src="project.js"> </script>
+      
+    
+</body>
+</html>
