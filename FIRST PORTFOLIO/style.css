@@ -1,0 +1,441 @@
+/* media rules */
+@supports (aspect-ratio: 1 / 1) and (display:flex) and (flex-direction: row) {
+@media (max-width:1280px) {
+    body .window-father {
+        transform: translateY(30%);  
+    
+    }
+    .text-container.window [header-part] .first-title {
+
+        font-size: 1.8rem;
+
+    }
+    [header-part] .text-container
+     .subtext {
+        font-size:  .8rem;
+    }
+}
+
+@media(min-width:1280px) {
+
+
+    [header-part]  .text-container
+    .first-title{ 
+
+        font-size: 2.2rem;
+
+    }
+    
+    [header-part] .text-container
+    .contact-button, [main-part] [text-section] .text-container, [left-section] .more-button,
+    [header-part] .text-container 
+    .subtext {
+        font-size: 1.1rem;
+      
+    }
+   
+   
+    
+    [left-section] .about-header {
+        font-size: 1.7rem;
+    }
+    [bottom-info] .by-text  {
+        font-size: 1.9rem;
+    }
+    [right-section] .experience-header {
+        font-size: 1.3rem;
+
+    }
+    [right-section] h1 {
+        font-size: 1.1rem;
+    }
+    [right-section] h1 > span {
+        font-size: 0.9rem;
+    }
+    [rights] .data-subtext {
+        font-size: 1rem;
+    }
+    [rights] .reserved-header {
+        font-size: 1.3rem;
+    }
+   
+
+    
+    
+}
+
+    @media(min-width:768px) and (max-width:1280px) {
+        [header-part] .text-container .first-title, [bottom-info] .by-text {
+            
+            font-size: 1.7rem;
+            
+        }
+        [main-part] [left-section] .text-container, [right-section] h1.front-header {
+            font-size:.8rem ;
+        }
+        [left-section] .about-header {
+            font-size: 1.4rem;
+        }
+        [right-section] .experience-header {
+            font-size: 1.1rem;
+        }
+        [right-section] h1 {
+            font-size: 0.9rem;
+        }
+        
+        [rights] .data-subtext {
+            font-size: 0.8rem;
+        }
+       
+      
+    }
+    @media (min-width:1024px)and(max-width:1280px) {
+
+        [header-part] .text-container .subtext {
+            font-size: .8rem;
+        }
+        [right-section] h1.front-header {
+            font-size: 5rem;
+        }
+
+        [rights] .reserved-header {
+            font-size: 1.3rem;
+        }
+        
+    }
+
+
+    
+    
+    @media (max-width:768px) {
+        [header-part] .text-container .first-title, [bottom-info] .by-text {
+            
+            font-size: 1.5rem;
+        }
+        [header-part] .text-container .subtext, [main-part] [left-section] 
+        .text-container, [right-section] > h1 span, [rights] .data-subtext {
+            font-size: 0.7rem;
+        }
+        [main-part] [left-section] 
+        .about-header {
+            font-size: 1.1rem;
+
+
+        }
+         
+        [left-section] .more-button {
+            font-size: 0.9rem;
+        }
+        
+        [bottom-info] .description, [right-section] > h1{
+            font-size: 0.8rem;
+        }
+        [right-section] > h1.front-header {
+            font-size: 0.65rem;
+        }
+        [rights] .reserved-header {
+            font-size: 0.9rem;
+        }
+        [rights] .data-subtext {
+            font-size: 0.6rem;
+        }
+    
+    }
+
+    
+    
+    
+}
+    :root {
+        
+    --bg-body:#dfdfdf;
+
+    --bg-window:#FBFBFB;
+
+    --c-subtext:#535353; 
+}
+.transition {
+    transition: all 0.3s ease-out;
+}
+head {
+    position: relative;
+}
+/* body styles  */
+body {
+    /* user-select: none; */
+    display: flex;
+    position: relative;
+    /* align-items: center; */
+    /* max-height:100%; */
+    justify-content: center;
+    overflow: hidden;
+    
+    align-items: center;
+    background: var(--bg-body);
+    height: 100svh;
+}
+
+/*properties for father of main window
+ (must have for relative window) */
+
+body .window-father {
+    border-radius: 1rem;
+    bottom: none;
+    /* overflow: hidden; */
+    box-shadow: 0 15px 40px 1px rgb(149, 149, 149);
+    width: 70vw;
+    background: var(--bg-window);
+    
+    min-width: 30rem;
+    min-height: 35rem;
+
+    max-width: 1200px;
+    max-height: 800px;
+    
+    padding: 5% 6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50vw;
+    position: relative;
+}
+.window-father .window {
+    background:  var(--bg-window);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border:1px solid rgb(0, 34, 255); */
+    position: relative;
+    height: 100%;
+    padding: 0% 5%;
+}
+
+
+/*  styles for first part of window PART ONE*/
+.window [header-part] {
+    top:0%;
+    position: absolute;
+    border-bottom:3px  dashed rgb(176, 176, 176);
+    width:100%;
+    /* margin: 0% 10% 10% 10%; */
+    padding: 1% 0%;
+    
+    height: 30%;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap:3%;
+    flex-direction: row;
+    line-height: 1.2;
+    align-items: center;
+    
+}
+.window [header-part], .window [main-part] .experience-header, .window [bottom-info] .by-text, .description {
+
+    font-weight: 600;
+    font-family: "Poppins",sans-serif;
+    
+}
+
+[header-part] .text-container {
+    /* border:1px solid red; */
+    margin: 0;
+}
+[header-part] .subtext {
+    color: var(--c-subtext);
+}
+
+/* image container in header */
+
+[header-part] .image-container  {
+    
+   
+    overflow: hidden;
+    
+    border-radius: 10rem;
+    
+    display: flex;
+    flex-direction: row;
+    aspect-ratio: 1 / 1;
+    height: 80%;
+    justify-content: center;
+   
+    
+}
+.image-container img {
+    border-radius: 10rem;
+    aspect-ratio:  1/ 1;
+  
+}
+
+/* image when it hover  */
+.image-container img:hover {
+    transform: scale(1.1);
+    /* border: 1px solid; */
+    
+}
+
+/* directly the photo itself */
+.image-container .portfolio-picture {
+    width: 100%;
+    
+}
+
+
+/* button in header section */
+[header-part] .text-container .contact-button, [left-section] .more-button  {
+    
+    font-weight: 600;
+    font-family: "Poppins",sans-serif;
+    border: 1px solid black;
+    border-radius: none;
+    width: fit-content;
+    background: none;
+    cursor: pointer;
+    
+}
+
+.contact-button a {
+/* position: absolute; */
+/* opacity: 0; */
+ width: 100%;
+ color:black;
+ text-decoration: none;
+ height:100%;
+    
+
+}
+.contact-button:hover a {
+    color:white;
+    /* padding: 0; */
+}
+/* properties when he is hovered */
+[header-part] .text-container .contact-button:hover, .contact-button:hover, [left-section] .more-button:hover  {
+    
+    color:white;
+    background: #000;
+}
+/* Second part in the window PART TWO */
+.window > [main-part] {
+    position: absolute;
+    
+    top: 35%;
+    display: flex;
+    flex-direction: row;
+    /* overflow: hidden; */
+    left: 0;
+    width: 100%;
+    /* gap: 10%; */
+    max-height: 50%;
+    
+}
+
+
+[main-part] [left-section], [right-section], [right-section] p > span, [rights] {
+
+    font-family: "Poppins",sans-serif;
+ }
+
+[main-part] [left-section] {
+    display: flex;
+
+    min-width:20rem;
+    width: 70%;
+    max-width: 40rem;
+    flex-direction: column;
+    
+}
+ [left-section] 
+        .about-header, 
+        .more-button,
+        .experience-header {
+            font-weight:600 ;
+            margin:3% 0 4% 0%;
+
+
+        }
+
+        [left-section] .text-container >* {
+            /* border:1px solid red; */
+            padding: 0;
+            margin: 0;
+        }
+        [left-section] .about-header  {
+            text-decoration: underline;
+        }
+        [left-section] .more-button {
+            width:fit-content
+        }
+
+[main-part] [right-section] {
+    
+    margin-left: auto;
+    width:fit-content;
+   
+    padding-top: 3%;
+    
+    
+ 
+}
+[right-section] > h1  {
+    color: black;
+    font-weight: 500;
+    margin: 0;
+}
+[right-section] > h1 span {
+    color: rgb(152, 152, 152);
+    font-weight: 400;
+    
+
+}
+
+[right-section] .blitz-header, .front-header, .hay-header {
+    margin: 10% 0 0% 0;
+    line-height: 1.1;
+
+}
+
+.window [bottom-info] {
+    border-top:2px dashed gray ;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    position: absolute;
+    flex-direction: column;
+    bottom: 0%;
+    padding: 2%;
+
+}
+
+[bottom-info] > *  {
+     line-height: 1.1;
+    margin: 0;
+    transition: all 0.3 ease-out;
+}
+
+
+
+[rights] {
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+ 
+    flex-direction: row;
+    line-height: .4;
+    height: fit-content;
+    
+
+}
+[rights]  .reserved-header, .data-subtext {
+    font-weight:600;
+}
+[rights] .reserved-header {
+    color: rgb(87, 87, 87);
+}
+[rights] .data-subtext {
+    color: rgb(156, 156, 156);
+    
+}
